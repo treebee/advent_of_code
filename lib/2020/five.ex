@@ -13,17 +13,7 @@ defmodule AdventOfCode.TwentyTwenty.Five do
       |> parse_input
       |> Enum.to_list()
 
-    {pred, curr, succ} = calc_seats(seats, [], [], [])
-
-    MapSet.difference(MapSet.intersection(pred, succ), curr)
-  end
-
-  defp calc_seats([], pred, curr, succ) do
-    {MapSet.new(pred), MapSet.new(curr), MapSet.new(succ)}
-  end
-
-  defp calc_seats([h | tail], pred, curr, succ) do
-    calc_seats(tail, [h - 1 | pred], [h | curr], [h + 1 | succ])
+    MapSet.difference(MapSet.new(Enum.min(seats)..Enum.max(seats)), MapSet.new(seats))
   end
 
   defp parse_input(filename) do
