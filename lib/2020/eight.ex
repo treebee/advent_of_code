@@ -1,7 +1,7 @@
 defmodule AdventOfCode.TwentyTwenty.Eight do
   use AdventOfCode
 
-  def solve(filename \\ "seven.txt") do
+  def solve(filename \\ "eight.txt") do
     program =
       read_input(filename)
       |> Enum.map(&String.trim/1)

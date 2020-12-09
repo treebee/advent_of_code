@@ -2,20 +2,19 @@ defmodule AdventOfCode.TwentyTwenty.One do
   use AdventOfCode
 
   def puzzle1() do
-    read_input("one-1.txt")
+    read_input("one-1.txt", trim: true)
     |> parse_input()
     |> solve_puzzle1()
   end
 
   def puzzle2() do
-    read_input("one-1.txt")
+    read_input("one-1.txt", trim: true)
     |> parse_input()
     |> solve_puzzle2()
   end
 
   def parse_input(input) do
     input
-    |> Stream.map(&String.trim/1)
     |> Stream.map(&String.to_integer/1)
     |> Enum.sort(&(&1 >= &2))
   end

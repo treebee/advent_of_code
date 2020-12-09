@@ -10,17 +10,17 @@ defmodule AdventOfCode.TwentyTwenty.Five do
   def puzzle2(filename \\ "five.txt") do
     seats =
       filename
-      |> parse_input
+      |> parse_input()
       |> Enum.to_list()
 
     MapSet.difference(MapSet.new(Enum.min(seats)..Enum.max(seats)), MapSet.new(seats))
+    |> MapSet.to_list()
+    |> List.first()
   end
 
   defp parse_input(filename) do
     filename
-    |> input_path()
-    |> File.stream!()
-    |> Stream.map(&String.trim/1)
+    |> read_input(trim: true)
     |> Stream.map(fn line ->
       String.replace(line, ["F", "L"], "0") |> String.replace(["B", "R"], "1")
     end)
