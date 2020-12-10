@@ -4,6 +4,7 @@ defmodule AdventOfCode2020Test do
   alias AdventOfCode.TwentyTwenty.Seven
   alias AdventOfCode.TwentyTwenty.Eight
   alias AdventOfCode.TwentyTwenty.Nine
+  alias AdventOfCode.TwentyTwenty.Ten
 
   test "day 6" do
     assert Six.puzzle("six-ex.txt") == 11
@@ -20,5 +21,9 @@ defmodule AdventOfCode2020Test do
 
   test "day 9" do
     assert Nine.solve("nine-ex.txt", 5) == {127, 62}
+  end
+
+  test "day 10" do
+    assert Ten.solve("ten-ex.txt") == {220, 19208}
   end
 end
