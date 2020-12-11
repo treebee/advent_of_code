@@ -65,7 +65,9 @@ defmodule AdventOfCode.TwentyTwenty.Ten do
 
   def combinations(list), do: combinations(%{0 => 1}, [0 | Enum.sort(list)])
 
-  def combinations(acc, [last]), do: acc[last]
+  def combinations(acc, [last]) do
+    acc[last]
+  end
 
   def combinations(acc, [h | tail]) do
     tail
