@@ -30,4 +30,8 @@ defmodule AdventOfCode2020Test do
   test "day 11" do
     assert AdventOfCode.TwentyTwenty.Eleven.solve("eleven-ex.txt") == {37, 26}
   end
+
+  test "day 12" do
+    assert AdventOfCode.TwentyTwenty.Twelve.solve("twelve-ex.txt") == {25, 286}
+  end
 end
