@@ -46,4 +46,8 @@ defmodule AdventOfCode2020Test do
              |> Enum.to_list()
            ) == 165
   end
+
+  test "day 15" do
+    assert AdventOfCode.TwentyTwenty.Fifteen.solve([0, 3, 6]) == {436, 175_594}
+  end
 end
