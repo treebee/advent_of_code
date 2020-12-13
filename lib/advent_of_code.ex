@@ -22,4 +22,16 @@ defmodule AdventOfCode do
       end
     end
   end
+
+  def cartesian([]), do: []
+
+  def cartesian(lists) do
+    cartesian(Enum.reverse(lists), []) |> Enum.to_list()
+  end
+
+  defp cartesian([], elems), do: [elems]
+
+  defp cartesian([h | tail], elems) do
+    Stream.flat_map(h, fn x -> cartesian(tail, [x | elems]) end)
+  end
 end

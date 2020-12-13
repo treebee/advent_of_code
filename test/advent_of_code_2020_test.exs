@@ -1,5 +1,6 @@
 defmodule AdventOfCode2020Test do
   use ExUnit.Case
+  use AdventOfCode
   alias AdventOfCode.TwentyTwenty.Six
   alias AdventOfCode.TwentyTwenty.Seven
   alias AdventOfCode.TwentyTwenty.Eight
@@ -37,5 +38,12 @@ defmodule AdventOfCode2020Test do
 
   test "day 13" do
     assert AdventOfCode.TwentyTwenty.Thirteen.solve("thirteen-ex.txt") == {295, 1_068_781}
+  end
+
+  test "day 14" do
+    assert AdventOfCode.TwentyTwenty.Fourteen.execute(
+             read_input("../lib/2020/fourteen-ex.txt", trim: true)
+             |> Enum.to_list()
+           ) == 165
   end
 end
