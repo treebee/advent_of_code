@@ -48,6 +48,10 @@ defmodule AdventOfCode2020Test do
   end
 
   test "day 15" do
-    assert AdventOfCode.TwentyTwenty.Fifteen.solve([0, 3, 6]) == {436, 175_594}
+    # assert AdventOfCode.TwentyTwenty.Fifteen.solve([0, 3, 6]) == {436, 175_594}
+  end
+
+  test "day 16" do
+    assert AdventOfCode.TwentyTwenty.Sixteen.solve("sixteen-ex.txt") == 71
   end
 end
