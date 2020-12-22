@@ -20,6 +20,13 @@ defmodule AdventOfCode do
           false -> stream
         end
       end
+
+      def to_int(d) do
+        case Integer.parse(d) do
+          {i, ""} -> i
+          :error -> d
+        end
+      end
     end
   end
 
