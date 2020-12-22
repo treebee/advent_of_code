@@ -69,4 +69,6 @@ defmodule AdventOfCode.TwentyTwenty.TwentyTwo do
   end
 end
 
-System.argv() |> List.first() |> AdventOfCode.TwentyTwenty.TwentyTwo.solve() |> IO.inspect()
+Benchee.run(%{
+"day20" => fn -> System.argv() |> List.first() |> AdventOfCode.TwentyTwenty.TwentyTwo.solve() end
+})
